@@ -1,0 +1,58 @@
+body,p,ul,dl,dd,form,input,textarea,select{padding: 0; margin: 0; font-family: 微软雅黑;}
+body{background: #dedede;}
+ul, ol{list-style: none;}
+img{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+/*top区域*/
+#top{width: 100%; height: 60px; background: #333; }
+#top img{height: 40px; margin: 10px 0 10px 40px; }
+#top .top_nav{float: right; }
+.top_nav .top_menu{}
+.top_menu li{float: left; margin: 20px 15px 0 10px; }
+.top_menu li a{color: #fff; }
+
+/*content区域*/
+.ct1, .ct2, .ct3, .ct4, #register{
+	max-width: 90%; margin: 30px auto; background: #fff; box-shadow: 5px 5px 6px #888;
+	border-bottom: 1px solid #f2f1f1; border-left: 1px solid #f2f1f1; border-right:1px solid #f2f1f1;
+	padding-top: 30px; padding-left: 35px; padding-right: 35px; padding-bottom: 30px;  
+}
+.ct1 .ct_h h3, .ct2 .ct_h h3, .ct4 .ct_h h3{font-weight: lighter; }
+.ct1 .ct_h h4, .ct2 .ct_h h4, .ct4 .ct_h h4{font-weight: lighter;}
+.ct1 .ct_p, .ct1 .ct_p{text-indent: 2em; line-height: 25px; }
+.ct2 .list{margin-top: 20px; }
+.ct2 .list li{padding-bottom: 10px; list-style: none; }
+
+.ct3 figure{width: 320px; border: 1px solid #888; padding: 5px; }
+.ct3 figcaption{display: block; text-align: center; vertical-align: middle; }
+.ct3 figure img{display: block; margin: 10px auto; }
+
+.ct4 ol{list-style-type: decimal; }
+.ct4 table{width: 100%; border-collapse: collapse;}
+.ct4 .thead{background: #333; color: #fff; text-align: left; }
+.ct4 .tfooter{background: #dedede; }
+
+#register h2{border-left: 5px solid #dedede; font-size: 16px; padding-left: 10px; height: 30px; line-height: 30px; }
+#register #wrap{margin-left: 280px; }
+
+#wrap .form_email, #wrap .form_pwd{margin-bottom: 20px; }
+.form_email label{ }
+.form_email input{margin-left: 10px; }
+.form_email .error{margin-top: 5px; margin-left: 125px; font-size: 13px; } 
+
+.form_pwd .l1{margin-left: 30px; }
+.form_pwd input{margin-left: 10px; }
+.form_pwd .l2, .form_pwd #repwd{margin-top: 10px; }
+.form_pwd p{margin-top: 5px; margin-left: 125px; font-size: 13px; }
+
+/*.group{margin-left: 80px; }*/
+.form_gender, .form_city, .form_hobby{margin-left: 80px; padding-bottom: 20px; }
+.form_gender input, .form_city select, .form_hobby input{margin-left: 10px; }
+.form_statement{margin-left: 45px; }
+.form_statement textarea{margin-left: 10px;}
+#wrap .btn{width: 80%; height: 30px; background: #3355D0; margin: 10px auto; border-radius: 8px; }
+
+#bottom{background: #333; width: 100%; height: 40px; color: #fff;}
+#bottom .copy{text-align: center; padding-top: 10px; }

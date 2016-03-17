@@ -1,0 +1,63 @@
+body,p,ul,dl,dd,form,input,textarea,select{padding: 0; margin: 0; font-family: 微软雅黑;}
+body{background: #dedede;}
+ul, ol{list-style: none;}
+img{border: none;}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+/*top区域*/
+#top{width: 100%; height: 60px; background: #333; }
+#top img{height: 40px; margin: 10px 0 10px 40px; }
+#top .top_nav{float: right; }
+.top_nav .top_menu{}
+.top_menu li{float: left; margin: 20px 15px 0 10px; }
+.top_menu li a{color: #fff; }
+
+/*main区域*/
+#main{position: relative;}
+/*content区域*/
+#content{margin: 30px 500px 30px 30px; }
+.ct1, .ct2, .ct3, .ct4{
+	max-width: 90%; margin-bottom: 20px; background: #fff; box-shadow: 5px 5px 6px #888;
+	border-bottom: 1px solid #f2f1f1; border-left: 1px solid #f2f1f1; border-right:1px solid #f2f1f1;
+	padding-top: 30px; padding-left: 35px; padding-right: 35px; padding-bottom: 30px;  
+}
+.ct1 .ct_h h3, .ct2 .ct_h h3, .ct4 .ct_h h3{font-weight: lighter; }
+.ct1 .ct_h h4, .ct2 .ct_h h4, .ct4 .ct_h h4{font-weight: lighter;}
+.ct1 .ct_p, .ct1 .ct_p{text-indent: 2em; line-height: 25px; }
+.ct2 .list{margin-top: 20px; }
+.ct2 .list li{padding-bottom: 10px; list-style: none; }
+
+.ct3 figure{ float: left; width: 120px; border: 1px solid #888; padding: 5px; }
+.ct3 figcaption{display: block; text-align: center; }
+.ct3 figure img{display: block; margin: 10px auto; }
+
+.ct4 ol{list-style-type: decimal; }
+.ct4 table{width: 100%; border-collapse: collapse;}
+.ct4 .thead{background: #333; color: #fff; text-align: left; }
+.ct4 .tfooter{background: #dedede; }
+
+/*aside侧栏区域*/
+#register{
+	position: absolute; top: 0; right: 30px;
+	width: 400px; background: #fff; box-shadow: 5px 5px 6px #888;
+	border-bottom: 1px solid #f2f1f1; border-left: 1px solid #f2f1f1; border-right:1px solid #f2f1f1;
+	padding:30px 25px 35px 30px ;  
+}
+#register h2{border-left: 5px solid #dedede; font-size: 16px; padding-left: 10px; height: 30px; line-height: 30px; }
+/*#register #wrap{margin-left: 280px; }*/
+#wrap .form_email, #wrap .form_pwd{margin-bottom: 20px; }
+#wrap .hint{display: inline-block; text-align: right; width: 30%; padding: 5px 5px 0 0;  }
+/*vertical-align:text-top;技巧*/
+#wrap .field{display: inline-block; vertical-align: text-top;}
+#wrap .error{font-size: 13px; color: #999; }
+#wrap .group{padding-bottom: 10px;}
+#wrap textarea{vertical-align: text-top; }
+#wrap .btn{width: 100%; margin: 10px auto; border-radius: 10px; color: #fff; background-color: #35d; font-weight: bold; font-size: 16px;  }
+
+#bottom{background: #333; width: 100%; height: 40px; color: #fff;}
+#bottom .copy{text-align: center; padding-top: 10px; }
+
+/*清除浮动*/
+.clearfix{zoom: 1;}
+.clearfix:after{content: ""; display: block; clear: both; }

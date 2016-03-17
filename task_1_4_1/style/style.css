@@ -1,0 +1,26 @@
+body{margin: 0; padding: 0; }
+#rectangle{
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0 0 -200px;
+	position: absolute;
+	overflow: hidden;
+}
+ .cir{
+	width: 100px;
+	height: 100px;
+	background-color: #fc0;
+	border-radius: 50%;
+	position: absolute;
+}
+.left{
+	top: -50px;
+	left: -50px;
+}
+.right{
+	bottom: -50px;
+	right: -50px;
+} 

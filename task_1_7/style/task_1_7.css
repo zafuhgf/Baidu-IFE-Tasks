@@ -1,0 +1,28 @@
+/*style reset*/
+body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select{padding: 0;	margin: 0; font-family: arial; font-family: 微软雅黑;}
+li{list-style: none;}
+img{border: none;}
+a{text-decoration: none; }
+.clearfix{zoom:1; }  
+.clearfix:after{content: ""; display: block; clear: both; }
+/*a:hover{text-decoration: underline;}*/
+/*top区域*/
+#top{max-width: 100%; min-width: 1280px; height: 56px; background: #fff; }
+/*top_left部分*/
+#top .top_left{margin-left: 59px; padding-top: 13px; height: 31px; width: 104px; float: left; position: relative; }
+.top_left img{width: 31px; }
+.top_left h2{font-size: 21px; font-weight: normal; font-family: "黑体"; position: absolute; top: 19px; left: 41px; }
+.top_left a{color: #000; }
+/*top_right nav 部分*/
+.active{color: #e74f4d; border-bottom: 4px solid #e74f4d; }
+#top .top_right{margin-right: 68px; }
+.top_right .top_list{float: right; }
+.top_list li{float: left; line-height: 56px; padding-left: 24px; }
+.top_list a{display: block; width: 64px; color: #787b83; font-size: 14px;  text-align: center;}
+.top_list a:hover{color: #e74f4d; border-bottom: 4px solid #e74f4d; }
+/*top_right 登录 部分*/
+.top_list .login{background: url(../images/avatar.png) no-repeat center left; }
+.top_list a.login:hover{border-bottom: none;}
+
+
+

@@ -17,12 +17,17 @@ a{text-decoration: none; }
 .active{color: #e74f4d; border-bottom: 4px solid #e74f4d; }
 #top .top_right{margin-right: 68px; }
 .top_right .top_list{float: right; }
-.top_list li{float: left; line-height: 56px; padding-left: 24px; }
-.top_list a{display: block; width: 64px; color: #787b83; font-size: 14px;  text-align: center;}
+.top_list li{float: left; line-height: 52px; padding-left: 24px; }
+.top_list a{display: block; width: 64px; color: #787b83; font-size: 14px; text-align: center;}
 .top_list a:hover{color: #e74f4d; border-bottom: 4px solid #e74f4d; }
 /*top_right 登录 部分*/
 .top_list .login{background: url(../images/avatar.png) no-repeat center left; }
 .top_list a.login:hover{border-bottom: none;}
-
-
+/*banner区域*/
+#banner{max-width: 100%; min-width: 1280px; background: url(../images/banner.png) no-repeat center; height: 690px; background-size: cover; position: relative; }
+#banner .banner_text{position: absolute; top: 246px; left: 162px;  }
+.banner_text h1{color: #fff; font-size: 60px; font-weight: normal; }
+.banner_text p{color: #fff; font-size: 21px; font-weight: normal; }
+#banner .banner_btn{width: 320px; height: 64px; background: #e74f4d; position: absolute; top: 430px; left: 160px; }
+.banner_btn a{font-size: 30px; font-weight: normal; color: #fff; height: 63px; line-height: 63px; width: 130px; text-align: center; display: block; padding-left: 100px; }
 

@@ -56,5 +56,11 @@ a{text-decoration: none; }
 .search_list li{height: 26px; line-height: 27px; font-size: 12px; color: #a8aaaa; background: #e3e2e4; text-align: left; text-indent: 24px; }
 .search_list li:hover{background: #be4e48 url(../images/search_check.png) no-repeat left; cursor: pointer; color: #fff; }
 .search_form .search_btn{font-size: 14px; color: #fff; background: #be4e48; border: 0; padding: 0; cursor: pointer; }
-
+/*acts*/
+#acts{background: #f7f7f7; min-width: 1280px; height: 606px; padding-top: 104px; text-align: center; }
+#acts .act_pic{display: inline-block; width: 220px; height: 390px; vertical-align: middle; margin: 0 17px; }
+.act_pic img{border: 1px solid #cecfce; padding: 14px 10px; background: #fff;}
+.act_pic h2{font-size: 16px; font-weight: normal; padding-bottom: 13px; }
+.act_pic p{font-size: 14px; color: #bcbdbd; }
+.act_sh h2{font-size: 20px; letter-spacing: 1.4em; margin-left: 26px; }
 

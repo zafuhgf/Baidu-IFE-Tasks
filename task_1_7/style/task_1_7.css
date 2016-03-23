@@ -30,4 +30,31 @@ a{text-decoration: none; }
 .banner_text p{color: #fff; font-size: 21px; font-weight: normal; }
 #banner .banner_btn{width: 320px; height: 64px; background: #e74f4d; position: absolute; top: 430px; left: 160px; }
 .banner_btn a{font-size: 30px; font-weight: normal; color: #fff; height: 63px; line-height: 63px; width: 130px; text-align: center; display: block; padding-left: 100px; }
+/*point区域*/
+#point{max-width: 100%; min-width: 1280px; height: 250px; }
+#point .point_info{float: left; width: 25%; margin-top: 46px; height: inherit; text-align: center; box-sizing: border-box; }
+.point_info img{ }
+.point_info p{font-size: 14px; font-weight: normal; margin-top: 32px; border-right: 2px solid #aaaaab;  height: 52px; }
+.point_info:last-child p{border-right: none; }
+/*middle区域*/
+#middle{min-width: 1280px; height: 360px; background: #ededec; text-align: center; padding-top: 90px; }
+#middle img{height: 91px; }
+#middle h1{color: #b2b2b1; font-size: 54px; font-weight: normal; font-family: "黑体"; margin-top: 48px; }
+/*search*/
+#search{min-width: 1280px; height: 340px; background: url(../images/search.png) no-repeat center; background-size: cover; padding-top: 54px; }
+.search_text{text-align: center; }
+.search_text h2{font-size: 21px; font-weight: normal; color: #fff; }
+.search_text h2:after{display: block; content: ""; background: #fff; width: 30px; height: 2px; margin:12px auto 20px; }
+.search_text p{font-size: 12px; color: #fff; }
+/*search form*/
+.search_form{text-align: center; margin-top: 52px; }
+.search_list{width: 236px; height: 38px; display: inline-block; margin: 0 15px; vertical-align: middle; }
+.search_default{background: #fff; width: inherit; height: inherit; position: relative; }
+.search_default span{height:38px; line-height: 38px; font-size: 12px; color: #a8aaaa; position: absolute; left: 14px;  }
+.search_default i{display: block; width: 18px; height: 18px; position: absolute; top: 10px; right: 10px; background: url(../images/search_pull.png) no-repeat; }
+.country ul, .city ul{display: none; }
+.search_list li{height: 26px; line-height: 27px; font-size: 12px; color: #a8aaaa; background: #e3e2e4; text-align: left; text-indent: 24px; }
+.search_list li:hover{background: #be4e48 url(../images/search_check.png) no-repeat left; cursor: pointer; color: #fff; }
+.search_form .search_btn{font-size: 14px; color: #fff; background: #be4e48; border: 0; padding: 0; cursor: pointer; }
+
 

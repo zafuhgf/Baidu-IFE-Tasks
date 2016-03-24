@@ -63,4 +63,35 @@ a{text-decoration: none; }
 .act_pic h2{font-size: 16px; font-weight: normal; padding-bottom: 13px; }
 .act_pic p{font-size: 14px; color: #bcbdbd; }
 .act_sh h2{font-size: 20px; letter-spacing: 1.4em; margin-left: 26px; }
+/*new world & new age*/
+#new{min-width: 1280px; height: 1086px; }
+#new .fd{float: left; text-align: center;}
+/*new_1*/
+.new_1{width: 66.666%; height: 566px; background: url(../images/new1.png) no-repeat; background-size: cover; padding-top: 136px; position: relative; }
+.new_1 h2{font-size: 50px; color: #fff; font-weight: normal;  padding-bottom: 14px; }
+.new_1 h3{font-size: 158px; color: #fff; font-weight: normal; height: 120xp; line-height: 120px; padding-bottom: 38px; }
+.new_1 p{font-size: 22px; color: #fff; }
+.new_1 i{background: url(../images/nw_02.png) no-repeat ; width: 25px; height: 31px; display: block; position: absolute; right: 0; top: 298px; overflow: hidden; }
+/*new_2*/
+.new_2{width: 33.333%; height: 702px; padding: 0 70px;  box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+.new_2 img{margin: 166px 0 36px 0; }
+.new_2 p{font-size: 12px; font-family: "宋体"; color: #aaaaaa; margin-bottom: 52px; line-height: 35px; }
+.new_2 a{border: 1px solid #e4666a; color: #e25c60; font-size: 12px; width: 106px; height: 32px; display: inline-block; line-height: 32px; }
+.new_2 .more{border-radius: 100%; border: 1px solid #919292; display: inline-block; width: 12px; height: 12px; margin: 25px 25px; }
+.new_2 .current{background: #919292; }
+
+.new_3, .new_4, .new_5{width: 33.333%; height: 520px; }
+/*new_3*/
+.new_3{background: #e74f4d; color: #fff; }
+.new_3 p{font-size: 21px;  font-family: "黑体"; margin-top: 174px; line-height: 26px; }
+.new_3 p:after{display: block; content: ""; width: 32px; height: 2px; margin: 26px auto 24px; background: #fff; }
+.new_3 a{border: 1px solid #fff; color: #fff; font-size: 21px; width: 170px; height: 42px; line-height: 42px; display: inline-block; }
+/*new_4*/
+.new_4{background: #fff; }
+.new_4 p{font-size: 21px; color: #000; font-family: "黑体"; margin-top: 174px; line-height: 26px; }
+.new_4 p:after{display: block; content: ""; width: 32px; height: 2px; margin: 26px auto 24px; background: #000; }
+.new_4 a{border: 1px solid #e74f4d; color: #e74f4d; font-size: 21px; width: 170px; height: 42px; line-height: 42px; display: inline-block; }
+/*new_5*/
+.new_5{background: url(../images/new2.png) no-repeat; background-size: cover; position: relative;}
+.new_5 i{background: url(../images/nw_03.png) no-repeat; position: absolute; top: 298px; left: -1px; width: 25px; height: 31px; display: block; overflow: hidden; }
 

@@ -102,15 +102,15 @@ a{text-decoration: none; }
 .join_top h2{margin: 120px 0 20px 0; font-size: 21px; color: #323333; font-weight: normal; }
 .join_top p{font-size: 12px; color: #aaaaaa; margin-bottom: 110px; }
 
-#join .form_wrap{width: 100%; min-width: 1280px; padding-bottom: 168px; }
-.form_wrap .rule_list{ width:33.333%; min-width: 360px; text-align: left; float: left; }
-.rule_list dl{margin-bottom: 40px; width: 100%; position: relative; padding-bottom: 10px; padding-left: 140px; }
+#join .form_wrap{width: 100%; min-width: 1280px; padding-bottom: 150px; }
+.form_wrap .rule_list{ width:23.333%; min-width: 360px; text-align: left; float: left; padding-left: 100px; }
+.rule_list dl{margin-bottom: 40px; width: 360px; position: relative; padding-bottom: 10px;  }
 .rule_list dl dt{font-size: 14px; color: #231815; margin-bottom: 28px;  }
 .rule_list dl dd{font-size: 12px; color: #9d9b9a; font-family: "宋体";  }
-.rule_list span{background: url(../images/term.png) no-repeat; display: block; position: absolute; width: 84px; height: 14px; bottom: 0; right: 0; }
+.rule_list span{background: url(../images/term.png) no-repeat; display: block; position: absolute; width: 60px; height: 10px; bottom: 0; right: 0; }
 
-.form_wrap form{width: 66.666%; min-width: 720px; float: left; text-align: left;}
-.input_wrap{width: 49%; background: #edecee; margin: 0 0 10px 0; padding: 9px 0; }
+.form_wrap form{width: 66.666%; min-width: 720px; float: left; text-align: left; }
+.input_wrap{width: 49%; background: #edecee; margin: 0 0 22px 0; padding: 9px 0; }
 .username, .usermethod{float: left; }
 .userage, .useradress{float: right; }
 .input_wrap label{font-size: 12px; font-family: "宋体"; display: inline-block; padding-left: 18px; color: #767777; width: 18%; }
@@ -119,4 +119,22 @@ a{text-decoration: none; }
 .textarea label{font-size: 12px; font-family: "宋体"; display: block; padding-left: 18px; color: #767777; margin-bottom: 10px; }
 .textarea textarea{width: 80% ; height: 120px; background: #edecee; border: none; margin-left: 12px; resize: none; outline: none; }
 .btn{width: 100%; height: 40px; line-height: 40px; text-align: center; border:none; font-size: 14px; font-family: "黑体"; color: #323333; }
+/*contact us*/
+#footer{min-width: 1280px; background: #32363e; height: 356px; text-align: center; }
+#footer .contact{padding-top: 90px; }
+.contact h2{font-size: 21px; font-family: "黑体"; margin-bottom: 10px; }
+.contact p{font-size: 12px; font-family: "宋体"; margin-bottom: 30px; line-height: 30px; }
+#footer .email{width: inherit; height: 42px; display: inline-block; margin-bottom: 30px; }
+.email input[type="email"]{height: 42px; width: 430px; outline: none; border: none; padding-left: 10px; }
+.email input[type="submit"]{height: 42px; width: 80px; border: none; font-size: 15px; background: #6f7178; letter-spacing: 5px; }
+#footer .icon{width: 100%; height: 30px; }
+.icon .fi{margin: 0 10px; display: inline-block; }
+.icon .icon1{background: url(../images/qq.png) no-repeat; width: 24px; height: 25px; }
+.icon .icon2{background: url(../images/weibo.png) no-repeat; width: 29px; height: 25px; }
+.icon .icon3{background: url(../images/twitter.png) no-repeat; width: 29px; height: 25px; }
+.icon .icon4{background: url(../images/world.png) no-repeat; width: 24px; height: 25px; }
+/*backtop*/
+#back{width: 100%; background: #2f2f38; height: 58px; }
+#back p{float: left; font-size: 12px; font-family: "宋体"; margin: 30px 0 0 100px; color: #fff;}
+#back a{float: right; font-size: 12px; font-family: "宋体"; margin: 30px 40px 0 0; color: #fff; }
 

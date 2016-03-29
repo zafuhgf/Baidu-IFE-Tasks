@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task_1_13</title>
+</head>
+<body>
+	<label>请输入今日杭州天气质量<input type="text" id="api-input" /></label>
+	<button id="button">确认填写</button>
+	<div>您输入的值为：<span id="api-display">尚无录入</span></div>
+	
+	<script type="text/javascript">
+		var oInput = document.getElementById('api-input'),oBtn = document.getElementById('button'), oSpan = document.getElementById('api-display'); 
+		oBtn.onclick = function(){
+			if (oInput.value) {
+				oSpan.innerHTML = oInput.value;
+			}else{
+				alert('不能为空');
+			}
+		}
+	</script>
+</body>
+</html>

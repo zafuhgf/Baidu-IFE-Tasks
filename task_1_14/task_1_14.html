@@ -39,12 +39,13 @@ var aqiData = [
   //获取ul节点
   var oUl=document.getElementById('aqi-list');
   //计数
-  var count=0;
+  // var count=0;
   //循环判断
   for (var i=0; i<aqiData.length; i++) {
   	var oLi=document.createElement('li');
   	if (aqiData[i][1]>=60) {
-  		oLi.innerHTML='第'+(++count)+'名:'+aqiData[i][0]+aqiData[i][1];
+  		// oLi.innerHTML='第'+(++count)+'名:'+aqiData[i][0]+aqiData[i][1];
+  		oLi.innerHTML='第'+(i+1)+'名:'+aqiData[i][0]+aqiData[i][1];
   		oUl.appendChild(oLi);
   	};
   };

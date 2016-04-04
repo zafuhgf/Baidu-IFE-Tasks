@@ -88,7 +88,7 @@ function render(data) {
     var text = "<li>第" + (i+1) + "名：" + data[i][0] + "空气质量 " + "<b>" + data[i][1] + "</b></li>";
     arr.push(text); 
   }
-  document.getElementById('resort').innerHTML = arr.join("");
+  document.getElementById('resort').innerHTML = arr.join("");//参数设为""，没有分隔符
 }
 
 function btnHandle() {

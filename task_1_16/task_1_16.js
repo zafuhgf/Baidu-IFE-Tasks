@@ -46,7 +46,25 @@ function addAqiData() {
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-
+	var oTable = $('aqi-table');
+	oTable.innerHTML = "";//表格置空
+	for(var strCity in aqiData){
+		//若表中无数据，则需要显示表头
+		if (oTable.children.length === 0) {
+			oTable.innerHTML = "<tr> <td>城市</td> <td>空气质量</td> <td>操作</td> </tr>";
+		}
+		var tr = document.createElement('tr');
+		var td1 = document.createElement('td');
+		td1.innerHTML = strCity;
+		tr.appendChild(td1);
+		var td2 = document.createElement('td');
+		td2.innerHTML = aqiData[strCity];
+		tr.appendChild(td2);
+		var td3 = document.createElement('td');
+		td3.innerHTML = "<button id="del-btn">删除</button>"
+		tr.appendChild(td3);
+		oTable.appendChild(tr);
+	}
 }
 
 /**

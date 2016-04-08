@@ -8,12 +8,16 @@
  */
 var aqiData = {};
 
-
+//该方法出现bug: Uncaught ReferenceError: $ is not definedinit 
 /*定义$(id)方法*/
-function $(id){
+/*function $(id){
 	if(typeof id != 'undefined'){
 		return document.getElementById('id');
 	}
+}*/
+//改写成如下函数即可
+function $(id){
+	return document.getElementById(id);
 }
 
 /**
@@ -26,8 +30,8 @@ function $(id){
 function addAqiData() {
 	/*var city = $('aqi-city-input').innerText;
 	var aqi = $('aqi-value-input').innerText;*/
-	var srtCity = $('aqi-city-input').value.trim();
-	var strAqi = $('aqi-value-input').value.trim();
+	var strCity = $('aqi-city-input').value.trim();
+	var strAqi = document.getElementById('aqi-value-input').value.trim();
 	//对输入的值进行规范处理
 	if (!strCity.match(/^[A-Za-z\u4E00-\u9FA5]+$/)) {
 		alert("城市名必须为中英文字符！");
@@ -46,7 +50,7 @@ function addAqiData() {
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-	var oTable = $('aqi-table');
+	var oTable = document.getElementById('aqi-table');
 	oTable.innerHTML = "";//表格置空
 	for(var strCity in aqiData){
 		//若表中无数据，则需要显示表头
@@ -92,10 +96,10 @@ function delBtnHandle(target) {
 function init() {
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-  var btn = $("add-btn");
+  var btn = document.getElementById("add-btn");
   btn.onclick = addBtnHandle;
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
-  var table = $(aqi-table);
+  var table = document.getElementById("aqi-table");
   table.addEventListener("click", function(e){
   	if (e.target && e.target.nodeName === "BUTTON") {
   		delBtnHandle(e.target);

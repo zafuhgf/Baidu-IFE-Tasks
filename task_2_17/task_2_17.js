@@ -139,8 +139,8 @@ function initCitySelector() {
   var cityList = '';
   for(var i in aqiSourceData){
     cityList += '<opation>' + i + '</opation>';
-    cityselect.innerHTML = cityList;
   }
+  cityselect.innerHTML = cityList;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
   addEvent(cityselect, 'change', citySelectChange);
 }

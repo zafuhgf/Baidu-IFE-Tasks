@@ -7,6 +7,11 @@ function addEvent{obj, type, fn}{
   }
 }
 
+//创建$(id)函数
+function $(id){
+  return document.getElementById(id);
+}
+
 /* 数据格式演示
 var aqiSourceData = {
   "北京": {
@@ -60,15 +65,26 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-  nowSelectCity: -1,
+  nowSelectCity: "北京";
   nowGraTime: "day"
 }
+
+//获取元素
+var formgratime = $("form-gra-time");
+var cityselect = $("city-select");
+var aqichartwrap = document.getElementsByClassName("aqi-chart-wrap")[0];
 
 /**
  * 渲染图表
  */
 function renderChart() {
-  
+  var color ='', text ='';
+  for(var item in chartData){
+    //随机产生16进制的颜色
+    color = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    text += '<div title="' + item + ':' + chartData[item] + '" style="height:'+ chartData[item] + 'px; background-color:' + color + '"></div>';
+  }
+  formgratime.innerHTML = text;
 }
 
 /**

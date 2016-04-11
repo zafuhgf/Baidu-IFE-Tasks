@@ -1,3 +1,12 @@
+//创建事件分配器,兼容W3C&IE
+function addEvent{obj, type, fn}{
+  if (obj && obj.addEventListener) {
+    obj.addEventListener(type, fn, false);
+  }else if(obj && obj.attachEvent) {
+    obj.attachEvent('on'+type, fn);
+  }
+}
+
 /* 数据格式演示
 var aqiSourceData = {
   "北京": {
@@ -23,10 +32,14 @@ function randomBuildData(seed) {
   var dat = new Date("2016-01-01");
   var datStr = ''
   for (var i = 1; i < 92; i++) {
+    //返回格式化后的日期 XXXX-XX-XX
     datStr = getDateStr(dat);
-    returnData[datStr] = Math.ceil(Math.random() * seed);
+    //随机生成空气指数并装入对应日期的对象,即表示XXXX-XX-XX : XX
+    returnData[dat Str] = Math.ceil(Math.random() * seed);
+    //日期递增+1
     dat.setDate(dat.getDate() + 1);
   }
+  //返回 日期 与对之的 天气指数 对象
   return returnData;
 }
 
@@ -55,7 +68,7 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-
+  
 }
 
 /**
@@ -67,6 +80,7 @@ function graTimeChange() {
   // 设置对应数据
 
   // 调用图表渲染函数
+  renderChart();
 }
 
 /**
@@ -78,6 +92,7 @@ function citySelectChange() {
   // 设置对应数据
 
   // 调用图表渲染函数
+  renderChart();
 }
 
 /**

@@ -24,6 +24,7 @@ var aqiSourceData = {
 */
 
 // 以下两个函数用于随机模拟生成测试数据
+//返回格式化的日期 函数
 function getDateStr(dat) {
   var y = dat.getFullYear();
   var m = dat.getMonth() + 1;
@@ -32,6 +33,7 @@ function getDateStr(dat) {
   d = d < 10 ? '0' + d : d;
   return y + '-' + m + '-' + d;
 }
+//返回 日期：天气指数 对象
 function randomBuildData(seed) {
   var returnData = {};
   var dat = new Date("2016-01-01");
@@ -92,9 +94,13 @@ function renderChart() {
  */
 function graTimeChange() {
   // 确定是否选项发生了变化 
-
+  if (pageState.nowGraTime == this.value ) {
+    return;
+  }else{
+    pageState.nowGraTime = this.value;
+  }
   // 设置对应数据
-
+  initAqiChartData();
   // 调用图表渲染函数
   renderChart();
 }
@@ -104,9 +110,13 @@ function graTimeChange() {
  */
 function citySelectChange() {
   // 确定是否选项发生了变化 
-
+  if (pageState.nowSelectCity == this.value) {
+    return;
+  }else{
+    pageState.nowSelectCity = this.value;
+  }
   // 设置对应数据
-
+  initAqiChartData();
   // 调用图表渲染函数
   renderChart();
 }
@@ -115,7 +125,10 @@ function citySelectChange() {
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+  var pageRadio = formgratime.getElementsByTagName('input');
+  for(var i=0; i<pageRadio.length; i++){
+    addEvent(pageRadiop[i], 'click', graTimeChange);
+  }
 }
 
 /**

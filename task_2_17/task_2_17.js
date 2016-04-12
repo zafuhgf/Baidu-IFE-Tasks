@@ -1,5 +1,5 @@
 //创建事件分配器,兼容W3C&IE
-function addEvent{obj, type, fn}{
+function addEvent(obj, type, fn){
   if (obj && obj.addEventListener) {
     obj.addEventListener(type, fn, false);
   }else if(obj && obj.attachEvent) {
@@ -42,7 +42,7 @@ function randomBuildData(seed) {
     //返回格式化后的日期 XXXX-XX-XX
     datStr = getDateStr(dat);
     //随机生成空气指数并装入对应日期的对象,即表示XXXX-XX-XX : XX
-    returnData[dat Str] = Math.ceil(Math.random() * seed);
+    returnData[datStr] = Math.ceil(Math.random() * seed);
     //日期递增+1
     dat.setDate(dat.getDate() + 1);
   }
@@ -67,7 +67,7 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-  nowSelectCity: "北京";
+  nowSelectCity: "北京",
   nowGraTime: "day"
 }
 
@@ -75,7 +75,7 @@ var pageState = {
 var formgratime = $("form-gra-time");
 var cityselect = $("city-select");
 var aqichartwrap = document.getElementsByClassName("aqi-chart-wrap")[0];
-
+ 
 /**
  * 渲染图表
  */
@@ -84,9 +84,10 @@ function renderChart() {
   for(var item in chartData){
     //随机产生16进制的颜色
     color = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-    text += '<div title="' + item + ':' + chartData[item] + '" style="height:'+ chartData[item] + 'px; background-color:' + color + '"></div>';
+    // text += '<div title="' + item + ':' + chartData[item] + '" style="height:'+ chartData[item] + 'px; background-color:' + color + '"></div>';
+    text += '<div title="' + item +":"+chartData[item]+'" style="height:'+chartData[item]+'px; background-color:'+color+'"></div>';
   }
-  formgratime.innerHTML = text;
+  aqichartwrap.innerHTML = text;
 }
 
 /**
@@ -127,7 +128,7 @@ function citySelectChange() {
 function initGraTimeForm() {
   var pageRadio = formgratime.getElementsByTagName('input');
   for(var i=0; i<pageRadio.length; i++){
-    addEvent(pageRadiop[i], 'click', graTimeChange);
+    addEvent(pageRadio[i], 'click', graTimeChange);
   }
 }
 
@@ -138,7 +139,7 @@ function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
   var cityList = '';
   for(var i in aqiSourceData){
-    cityList += '<opation>' + i + '</opation>';
+    cityList += '<option>' + i + '</option>';
   }
   cityselect.innerHTML = cityList;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
@@ -151,6 +152,51 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
+  // nowCityData 存储着当前选中城市对应的天气指数，包括92天(2016年1-3月)
+  var nowCityData = aqiSourceData[pageState.nowSelectCity];
+  //选中的日期格式为 天
+   if(pageState.nowGraTime == 'day'){
+    chartData = nowCityData;
+   }
+  //选中的日期格式为 周
+  if(pageState.nowGraTime == 'week'){
+    chartData = {};
+    var aqiSum = 0, daySum = 0, week = 0;
+    for(var item in nowCityData){
+      aqiSum += nowCityData[item];
+      daySum++;
+      if ((new Date(item)).getDay() == 6) {
+        week++;
+        chartData['第' + week + '周'] = Math.floor(aqiSum/daySum);
+        aqiSum = 0;
+        daySum = 0;
+        }
+      }
+      if(daySum != 0){
+        week++;
+        chartData['第' + week + '周'] = Math.floor(aqiSum/daySum);
+    }
+  }
+  //选中的日期格式为 月
+  if(pageState.nowGraTime == 'month'){
+    chartData = {};
+    var aqiSum = 0, daySum = 0, month = 0;
+    for(var item in nowCityData){
+      aqiSum += nowCityData[item];
+      daySum++;
+      if ((new Date(item)).getMonth() !== month) {
+        month++;
+        chartData['第' + month + '月'] = Math.floor(aqiSum/daySum);
+        aqiSum = 0;
+        daySum = 0;
+       }
+      }
+      if(daySum != 0){
+        month++;
+        chartData['第' + month + '月'] = Math.floor(aqiSum/daySum);
+    }
+  }
+
 }
 
 /**

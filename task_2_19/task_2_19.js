@@ -72,25 +72,25 @@ function $(id){
 	}
 	//排序可视化函数
 	function dataSort(d){
-		var i = 0,
+		var len = data.length,
+			div = d,
+			i = 0,
 			j = 0,
 			temp,
-			len = data.length,
-			div = d,
 			clear = null;
 		clear = setInterval(test,15);
 			// console.log(clear);
 
 		//排序函数test 从小到大冒泡排序
-		function test(){
-			if(i<len){
-				if (j<len-i-1) {
-					if(data[j]>data[j+1]){
+		function test() {
+			if(i < len){
+				if (j < len-i-1) {
+					if(data[j] > data[j+1]){
 						temp = data[j];
 						data[j] = data[j+1];
 						data[j+1] = temp;
-						div[j].style.height = data[j]*4+'px';
-						div[j+1].style.height = data[j+1]*4+'px';
+						div[j].style.height = data[j] * 4 + 'px';
+						div[j+1].style.height = data[j+1] * 4 + 'px';
 					}
 					j++;
 					return;	
@@ -101,6 +101,7 @@ function $(id){
 			}else{
 				clearInterval(clear);
 			}
+
 		}
 	}
 	//分配事件函数
@@ -125,9 +126,9 @@ function $(id){
 	random.onclick = domOpe.ranData;
 
 	start.onclick = function(){
-		var divs = sort.getElementsByTagName("div");
+		var div = sort.getElementsByTagName("div");
 		// console.log(divs.length);
-		dataSort(divs);
+		dataSort(div);
 	}
 
 })();

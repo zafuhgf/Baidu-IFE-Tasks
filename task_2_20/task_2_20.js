@@ -31,8 +31,9 @@ oQuery.onclick = function(){
 }
 //渲染函数
 function render(str){
-	oDisplay.innerHTML = oData.map(function(d) {
+	oDisplay.innerHTML = oData.map(function(d) {//d表示oData中的数组元素
         if (str != null && str.length > 0) {
+        	//new RegExp(str, "g"):声明一个全局匹配，g表示全局搜索
             d = d.replace(new RegExp(str, "g"), "<span class='select'>" + str + "</span>");
         }
         return '<div>' + d + '</div>';

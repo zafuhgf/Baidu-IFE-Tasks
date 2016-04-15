@@ -84,7 +84,7 @@ function $(id){
 		//排序函数test 从小到大冒泡排序
 		function test() {
 			if(i < len){
-				if (j < len-i-1) {
+				if (j < len - i - 1) {
 					if(data[j] > data[j+1]){
 						temp = data[j];
 						data[j] = data[j+1];
@@ -93,7 +93,6 @@ function $(id){
 						div[j+1].style.height = data[j+1] * 4 + 'px';
 					}
 					j++;
-					return;	
 				}else{
 					j = 0;
 				}
@@ -108,7 +107,7 @@ function $(id){
 	leftIn.onclick = function(){
 		if(data.length < 60){
 			var value = parseInt(num.value);
-			/^([0-9]{1,2}|100)$/.test(value) ? domOpe.lIn(value) : alert("请输入正确的数值！");
+			/^([0-9]{2}|100)$/.test(value) ? domOpe.lIn(value) : alert("请输入正确的数值！");
 		}else{
 			alert("数据已饱和！");
 		}

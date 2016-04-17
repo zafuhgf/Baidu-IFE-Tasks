@@ -73,13 +73,21 @@ createList.prototype.leftShift = function(){
 	this.queue.shift();
 	this.render();
 };
+//trim()函数处理
+function trim(str) {
+    var regex1 = /^\s*/;
+    var regex2 = /\s*$/;
+    return (str.replace(regex1, "")).replace(regex2, "");
+}
 //输入内容分割处理
 function splitInput(str){
-	var arrInput = str.trim().split(/[,，;；、。.\s\n]+/);
+	var arrInput = trim(str);
+	arrInput = arrInput.split(/[,，;；、。.\s\n]+/);
 	return arrInput;
 }
 //showTag函数
 function showTag(){
+	//检测到用户输入规定的字符
 	if(/[,，;；、\s\n]+/.test(oTag.value) || event.keycode == 13){
 		var data = splitInput(oTag.value);
 		var newTag = data[0];

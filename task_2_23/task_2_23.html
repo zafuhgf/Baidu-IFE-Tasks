@@ -10,58 +10,111 @@
 <head>
     <meta charset="UTF-8">
     <title>task23</title>
-    
+    <style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		#container{
+			margin: 50px auto;
+			width: 1100px;
+		}
+		.graph div{
+			display: flex;
+			background-color: #fff;
+			border: 1px solid #000;
+			flex-grow: 1;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.root{
+			width: 100%;
+			height: 350px;
+		}
+		.root div{
+			margin: 0 10px;
+			height: 80%;
+		}
+		.operator{
+			margin: 20px 0;
+		}
+		.operator div{
+			margin: 10px 0;
+		}
+		.operator button{
+			outline: none;
+			box-shadow: 3px 3px 10px #ccc;
+			background-color: #fff;
+			padding: 5px;
+			margin-right: 10px;
+		}
+		.operator input{
+			outline: none;
+			height: 30px;
+			padding: 5px;
+		}
+		/*遍历过程中的激活状态*/
+		.graph .active{
+			background-color: #fef9d1;
+		}
+		/*遍历过程中的过渡状态*/
+		.graph .transition{
+			background-color: #ccc;
+		}
+    </style>
 </head>
 
 <body>
-   <div class="graph">
-   		<div class="root">
-   		    sports
-   		    <div>
-   		        ten
-   		        <div>
-   		            man
-   		            <div>fede</div>
-   		            <div>xluo</div>
-   		        </div>
-   		        <div>
-   		            wman
-   		            <div>w1</div>
-   		        </div>
-   		    </div>
-   		    <div>
-   		        football
-   		        <div>
-   		            man
-   		            <div>
-   		                Cluo
-   		                <div>wo</div>
-   		            </div>
-   		            <div>meisi</div>
-   		        </div>
-   		    </div>
-   		    <div>ping
-   		        <div>w3</div>
-   		    </div>
+   <div id="container">
+   		<h2>多叉树的遍历</h2>
+   		<div class="graph">
+			<div class="root">
+			    sports
+			    <div>
+			        ten
+			        <div>
+			            man
+			            <div>fede</div>
+			            <div>xluo</div>
+			        </div>
+			        <div>
+			            wman
+			            <div>w1</div>
+			        </div>
+			    </div>
+			    <div>
+			        football
+			        <div>
+			            man
+			            <div>
+			                Cluo
+			                <div>wo</div>
+			            </div>
+			            <div>meisi</div>
+			        </div>
+			    </div>
+			    <div>ping
+			        <div>w3</div>
+			    </div>
+			</div>
    		</div>
-   </div>
-   <div class="operator">
-   		<div class="traversal">
-   			遍历：
-   			<button id="traverseDF">深度优先遍历</button>
-   			<button id="traverseBF">广度优先遍历</button>
-   		</div>
-   		<div class="query">
-   			<label for="">查询</label>
-   			<input type="text" id="search" name="search" placeholder="输入查询词后点击搜索"/>
-   			<button id="searchDF">深度优先搜索</button>
-   			<button id="searchBF">广度优先搜索</button>
-   		</div>
-   		<div class="handleNode">
-   			<label for="add">添加</label>
-   			<input type="text" id="add" name="add" placeholder="添加新节点内容" />
-   			<button id="addNode">添加</button>
-   			<button id="delNode">删除</button>
+   		<div class="operator">
+			<div class="traversal">
+				遍历：
+				<button id="traverseDF">深度优先遍历</button>
+				<button id="traverseBF">广度优先遍历</button>
+			</div>
+			<div class="query">
+				<label for="">查询</label>
+				<input type="text" id="search" name="search" placeholder="输入查询词后点击搜索"/>
+				<button id="searchDF">深度优先搜索</button>
+				<button id="searchBF">广度优先搜索</button>
+			</div>
+			<div class="handleNode">
+				<label for="add">添加</label>
+				<input type="text" id="add" name="add" placeholder="添加新节点内容" />
+				<button id="addNode">添加</button>
+				<button id="delNode">删除</button>
+			</div>
    		</div>
    </div>
    <script src="./task_2_23.js"></script>

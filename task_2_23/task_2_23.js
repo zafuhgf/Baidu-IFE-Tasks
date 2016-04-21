@@ -128,13 +128,16 @@ function delNode(className){
         return false;
     for(var i = 0; i < length; i++){
         //node数组会在删除节点时改变
-        nodes[0].parentNode.removeChild(0);
+        nodes[0].parentNode.removeChild(nodes[0]);
     }
     return true;
 }
 
 function clearColor(tree){
-
+    tree.traverseDF();
+    tree.stack.forEach(function(ele){
+        ele.style.backgroundColor = "#fff";
+    });
 }
 
 function animation(nodes, keyword){
@@ -161,13 +164,33 @@ function Tree(node){
     this.root = node;
 }
 
-Tree.prototype.traverseDF = function(){
-    
-}
+Tree.prototype.traverseDF = function(callback){
+    var stack = [];
+    (function recurse(currentNode){
+        stack.push(currentNode);
+        for(var i = 0; i < currentNode.children.length; i++){
+            recurse(currentNode.children[i]);
+        }
+        callback ? callback(currentNode) : null;
+    })(this.root);
+    this.stack = stack;
+};
 
-Tree.prototype.traverseBF = function(){
-    
-}
+Tree.prototype.traverseBF = function(currentNode){
+    var queue = [],
+        currentNode = this.root;
+    this.stack = [];
+    this.stack.push(currentNode);
+    while (currentNode) {
+        var length = currentNode.children.length;
+        for (var i = 0; i < length; i++) {
+            queue.push(currentNode.children[i]);
+        }
+        callback ? callback(currentNode) : null;
+        currentNode = queue.shift();
+        this.stack.push(currentNode);
+    }
+};
 
 
 

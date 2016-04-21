@@ -75,10 +75,9 @@ TreeOrder.prototype.render = function(){
 	var treeStack = this.treeStack,
 		speeder = document.querySelector("#speeder"),
 		item = 0,
-		self =this,
+		self = this,//this再赋值给self的原因？
 		timer = null;
-
-	self.treeStack = [];
+	self.treeStack = [];//why?
 	if(!self.treeOrdering){
 		self.treeOrdering = true;
 		treeStack[item].style.backgroundColor = "#F125C2";
@@ -94,4 +93,5 @@ TreeOrder.prototype.render = function(){
 			}
 		},speeder.value);
 	}
+
 }

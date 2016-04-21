@@ -137,6 +137,25 @@ function clearColor(tree){
 
 }
 
+function animation(nodes, keyword){
+    lock = true;
+    var keyword = keyword || null;
+    (function show(){
+        var next = nodes.shift();
+        if(next){
+            next.style.backgroundColor = "#ccc";
+            setTimeout(function(){
+                if(!(next.firstChild.nodeValue == keyword)){//当前节点的子节点为文本节点
+                    next.style.backgroundColor = "#fff";
+                }
+                show();
+            },interval);
+        }else{
+            lock = false;
+        }
+    })();
+}
+
 function Tree(node){
     this.stack = [];
     this.root = node;

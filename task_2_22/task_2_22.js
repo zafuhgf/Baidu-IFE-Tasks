@@ -1,4 +1,4 @@
-//事件适配器
+w//事件适配器
 function addEvent(obj, type, fn){
 	if(obj && obj.addEventListener){
 		obj.addEventListener(type, fn, false);

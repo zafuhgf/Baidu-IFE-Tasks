@@ -126,28 +126,29 @@ window.onload = function(){
 				p.style.color = '#F80C0C';
 			}
 		});
-		//提交校验
-		addHandler(oBtn, 'click', function(){
-			var flag = true;
-			for(var i = 0; i < eleArr.length; i++){
-				var input = eleArr[i];
-				validate(input);
-				var p = input.parentElement.getElementsByTagName('p')[0];
-				p.innerHTML = checkResult.tip;
-				if(checkResult.right){
-					input.style.border = '2px solid #0EEC32';
-					p.style.color = '#0EEC32';
-				}else{
-					input.style.border = '2px solid ##F80C0C';
-					p.style.color = '#F80C0C';
-					flag = false;
-				}
-			}
-			if(flag){
-				alert("提交成功");
-			}else{
-				alert("提交失败，请检查输入");
-			}
-		});
 	}
+	//提交校验
+	addHandler(oBtn, 'click', function(){
+		var flag = true;
+		for(var i = 0; i < eleArr.length; i++){
+			var input = eleArr[i];
+			validate(input);
+			var p = input.parentElement.getElementsByTagName('p')[0];
+			p.innerHTML = checkResult.tip;
+			if(checkResult.right){
+				input.style.border = '2px solid #0EEC32';
+				p.style.color = '#0EEC32';
+			}else{
+				input.style.border = '2px solid ##F80C0C';
+				p.style.color = '#F80C0C';
+				flag = false;
+			}
+		}
+		if(flag){
+			alert("提交成功");
+		}else{
+			alert("提交失败，请检查输入");
+		}
+	});
+	
 }

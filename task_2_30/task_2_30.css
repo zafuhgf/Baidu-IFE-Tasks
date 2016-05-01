@@ -17,6 +17,12 @@ section span{
 	top: 10px;
 	text-align: right;
 }
+section p{
+	font-size: 15px;
+	position: relative;
+	top: 50px;
+	left: 33%;
+}
 input{
 	position: absolute;
 	left: 33%;

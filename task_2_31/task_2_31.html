@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task_2_31</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "Microsoft YaHei";
+			font-size: 20px;
+		}
+		form{
+			width: 100%;
+			height: 500px;
+			text-align: center;
+			padding-top: 50px;
+		}
+		#student{
+			display: inline-block;
+			margin-right: 20px;
+		}
+		#student input{
+			margin-right: 10px;
+		}
+		#nonstudent{
+			display: inline-block;
+		}
+		#nonstudent input{
+			margin-right: 10px;
+		}
+		#school{
+			display: block;
+			/*display: none;*/
+			margin-top: 30px;
+		}
+		#cityname{
+			border-radius: 5px;
+			margin: 0 20px;
+		}
+		#schoolname{
+			border-radius: 5px;
+			width: 250px;
+		}
+		#job{
+			margin: 30px auto 0;
+			display: block;
+			width: 600px;
+			display: none;
+		}
+		#work{
+			border: 1px solid #ccc;
+			border-radius: 5px; 
+			padding-left: 5px;
+			margin-left: 30px;
+			width: 380px;
+			height: 30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label id="student"><input id="campus" type="radio" name="person" checked="checked" />在校生</label>
+		<label id="nonstudent"><input id="noncampus" type="radio" name="person" />非在校生</label>
+		<label id="school">学校
+			<select id="cityname">
+				<option value="bj">北京</option>
+				<option value="sh">上海</option>
+				<option value="zj">浙江</option>
+			</select>
+			<select id="schoolname">
+				<option value="北京大学">北京大学</option>
+				<option value="中国人民大学">中国人民大学</option>
+				<option value="清华大学">清华大学</option>
+			</select>
+		</label>
+		<label id="job">就业单位<input id="work" type="text" /></label>
+	</form>
+	<script type="text/javascript">
+		/**
+		 * [addHandler 事件适配器]
+		 * @param {[type]}   obj  [事件对象]
+		 * @param {[type]}   type [事件类型]
+		 * @param {Function} fn   [事件函数]
+		 */
+		function addHandler(obj, type, fn){
+			if(obj && obj.addEventListener){
+				obj.addEventListener(type, fn, false);
+			}else if(obj && obj.attachEvent){
+				obj.attachEvent('on' + type, fn);
+			}else{
+				obj['on' + type] = fn;
+			}
+
+		}
+		/**
+		 * [$ 单个元素对象获取函数]
+		 * @param  {[type]} el [元素]
+		 * @return {[type]}    [description]
+		 */
+		function $(el){
+			return document.querySelector(el);
+		}
+		/**
+		 * [$$ 一组元素对象获取函数]
+		 * @param  {[type]} el [元素]
+		 * @return {[type]}    [description]
+		 */
+		function $$(el){
+			return document.querySelectorAll(el);
+		}	
+		//页面加载执行
+		window.onload = function(){
+			var campus = $('#campus');
+			var noncampus = $('#noncampus');
+			var school =$('#school');
+			var cityName = $('#cityname');
+			var schoolName = $('#schoolname');
+			var job = $('#job');
+			//在校生操作
+			addHandler(campus, 'click', function(e){
+				job.style.display = "none";
+				school.style.display = "block";
+			});
+			addHandler(cityName, 'change', function(e){
+				var school = {
+					bj: ["北京大学", "中国人民大学", "清华大学"],
+					sh: ["复旦大学", "上海交通大学", "上海大学"],
+					zj: ["浙江大学", "浙江工业大学", "浙江农林大学"]
+				}
+				var selectone = cityName.options[cityName.selectedIndex].value;
+				schoolName.innerHTML = "";
+				for(var i = 0; i < school[selectone].length; i++){
+					var opt = document.createElement('option');
+					opt.value = school[selectone][i];
+					opt.innerHTML = school[selectone][i];
+					schoolName.appendChild(opt); 
+				}
+			})
+			//非在校生操作
+			addHandler(noncampus, 'click', function(e){
+				school.style.display = "none";
+				job.style.display = "block";
+
+			})
+
+		}
+		
+
+	</script>
+</body>
+</html>

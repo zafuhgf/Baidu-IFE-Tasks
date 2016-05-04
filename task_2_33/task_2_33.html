@@ -42,10 +42,10 @@
 			border: 1px solid #ccc;
 			background-color: #fff;
 		}
-		.Top, .Right, .Bottom, .right{
+		.Top, .Right, .Bottom, .Left{
 			background-color: red;
 		}
-		.Top div, .Right div, .Bottom div, .right div{
+		.Top div, .Right div, .Bottom div, .Left div{
 			background-color: blue;
 			position: absolute;
 		}
@@ -280,24 +280,28 @@
 						var newBlock = getBlock(blockNow.X, blockNow.Y);
 						setBlock(newBlock);
 					}
+					break;
 				case 'Right':
 					if(blockNow.X < 10){
 						blockNow.X++;
 						var newBlock = getBlock(blockNow.X, blockNow.Y);
 						setBlock(newBlock);
 					}
+					break;
 				case 'Bottom':
 					if(blockNow.Y < 10){
 						blockNow.Y++;
 						var newBlock = getBlock(blockNow.X, blockNow.Y);
 						setBlock(newBlock); 
 					}
-				case 'Left':
+					break;
+				case 'Top':
 					if(blockNow.Y > 1){
 						blockNow.Y--;
 						var newBlock = getBlock(blockNow.X, blockNow.Y);
 						setBlock(newBlock);
 					}
+					break;
 			}
 		}
 		//方块转向函数

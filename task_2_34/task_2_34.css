@@ -3,6 +3,10 @@
 	border-radius: 4px;
 	position: relative;
 	overflow: hidden;
+	width: 429px;
+}
+#inputs{
+	margin-top: 20px;
 }
 .maze-block{
 	width: 42px;

@@ -2,335 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>task_2_33</title>
-	<style type="text/css">
-		*{
-			font-family: "Microsoft YaHei";
-			font-size: 1rem;
-		}
-		div, td{
-			margin: 0;
-			padding: 0;
-		}
-		#table{
-			margin: 0 auto;
-		}
-		td{
-			width: 40px;
-			height: 40px;
-			text-align: center;
-		}
-		tr:nth-child(n+2)>td:nth-child(n+2){
-			border: 1px solid #ccc;
-			position: relative;
-		}
-		tr:first-child td:nth-child(n+2), tr:last-child td:nth-child(n+2){
-			border-bottom: 2px solid #000;
-		}
-		tr:nth-child(n+2) td:first-child, tr:nth-child(n+2) td:last-child{
-			border-right: 2px solid #000;
-		}
-		#inputs{
-			width: 200px;
-			margin: 20px auto 0;
-		}
-		#order{
-			width: 100px;
-		}
-		#btn{
-			border-radius: 5px; 
-			border: 1px solid #ccc;
-			background-color: #fff;
-		}
-		.Top, .Right, .Bottom, .Left{
-			background-color: red;
-		}
-		.Top div, .Right div, .Bottom div, .Left div{
-			background-color: blue;
-			position: absolute;
-		}
-		.Top div, .Bottom div{
-			width: 100%;
-			height: 10px;
-		}
-		.Left div, .Right div{
-			width: 10px;
-			height: 100%;
-			top: 0;
-		}
-		.Top div{
-			top: 0px;
-		}
-		.Right div{
-			right: 0px;
-		}
-		.Bottom div{
-			bottom: 0px;
-		}
-		.Left div{
-			left: 0px;
-		}
-	</style>
+	<title>task_2_34</title>
+	<link rel="stylesheet" type="text/css" href="./task_2_34.css">
 </head>
 <body>
 	<table id="table" border="0" cellpadding="0" cellspacing="0">
 		<tr>
-			<td></td>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-			<td>10</td>
+			<td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>2</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>3</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>4</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>5</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>6</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>7</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>8</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>9</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 		<tr>
-			<td>10</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 		</tr>
 	</table>
 	<div id="inputs">
 		<input id="order" type="text" />
 		<input id="btn" type="button" value="执行" />
 	</div>
-	<script type="text/javascript">
-		var tBody = document.getElementById('table').childNodes[1];
-		// var tBody = document.getElementById('table').childNodes.item(1);
-		var order = document.getElementById('order');
-		var btn = document.getElementById('btn');
-		var dirs = ["Top", "Right", "Bottom", "Left"];
-		/**
-		 * [getBlock 获取方块单元格对象]
-		 * @param  {[type]} x [横轴方向]
-		 * @param  {[type]} y [竖轴方向]
-		 * @return {[type]}   [对象]
-		 */
-		function getBlock(x,y){
-			return tBody.childNodes[y*2].childNodes[x*2+1];
-		}
-		//设置方块div样式方向
-		function setDir(block, d){
-			block.className = d;
-		}
-		//设置方块头部红色区域div
-		function setDiv(block){
-			block.innerHTML = "<div></div>";
-		}
-		//清除单元格中的div
-		function cleanDiv(block){
-			block.innerHTML = '';
-		}
-		//更新单元格
-		function setBlock(block){
-			setDiv(block);
-			setDir(block, dirs[blockNow.dir]);
-			//清除之前单元格的格式与div
-			setDir(blockNow.Block, '');
-			cleanDiv(blockNow.Block);
-			//新单元格对象赋予全局单元格对象
-			blockNow.Block = block;
-		}
-		//定义方块位置全局对象
-		var blockNow = {
-			//获取在表格中的方块对象
-			Block : getBlock(5, 5),
-			//left
-			dir : 3,
-			X : 5,
-			Y : 5
-		}
-		setDiv(blockNow.Block);
-		setDir(blockNow.Block, "Left");
-		//方块移动函数
-		function GO(){
-			switch(blockNow.Block.className){
-				case 'Left':
-					if(blockNow.X > 1){
-						blockNow.X--;
-						//更新方块单元格对象
-						var newBlock = getBlock(blockNow.X, blockNow.Y);
-						setBlock(newBlock);
-					}
-					break;
-				case 'Right':
-					if(blockNow.X < 10){
-						blockNow.X++;
-						var newBlock = getBlock(blockNow.X, blockNow.Y);
-						setBlock(newBlock);
-					}
-					break;
-				case 'Bottom':
-					if(blockNow.Y < 10){
-						blockNow.Y++;
-						var newBlock = getBlock(blockNow.X, blockNow.Y);
-						setBlock(newBlock); 
-					}
-					break;
-				case 'Top':
-					if(blockNow.Y > 1){
-						blockNow.Y--;
-						var newBlock = getBlock(blockNow.X, blockNow.Y);
-						setBlock(newBlock);
-					}
-					break;
-			}
-		}
-		//方块转向函数
-		function calDir(z){
-			var d = (blockNow.dir + z >= 0 ? blockNow.dir + z : 3)%4;
-			blockNow.dir = d;
-			setDir(blockNow.Block, dirs[d]);
-		}
-		//方块运动&转向函数
-		function run(){
-			switch(order.value.trim()){
-				case 'GO':
-					GO();
-					break;
-				case 'TUN LEF':
-					calDir(-1);//函数未完成
-					break;
-				case 'TUN RIG':
-					calDir(1);//函数未完成
-					break;
-				case 'TUN BAC':
-					calDir(2);//函数未完成
-					break;
-			}
-		}
-
-		window.onload = function(){
-			btn.addEventListener('click', run(), false);
-		}
-	</script>
+	<script type="text/javascript" src="./task_2_34.js"></script>
 </body>
 </html>

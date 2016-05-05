@@ -1,66 +1,26 @@
-*{
-	font-family: "Microsoft YaHei";
-	font-size: 1rem;
-}
-div, td{
-	margin: 0;
-	padding: 0;
-}
-#table{
-	margin: 0 auto;
-}
-td{
-	width: 40px;
-	height: 40px;
-	text-align: center;
-}
-tr:nth-child(n+2)>td:nth-child(n+2){
-	border: 1px solid #ccc;
+#container{
+	border: 2px solid #000;
+	border-radius: 4px;
 	position: relative;
+	overflow: hidden;
 }
-tr:first-child td:nth-child(n+2), tr:last-child td:nth-child(n+2){
-	border-bottom: 2px solid #000;
+.maze-block{
+	width: 42px;
+	height: 42px;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	float: left;
 }
-tr:nth-child(n+2) td:first-child, tr:nth-child(n+2) td:last-child{
-	border-right: 2px solid #000;
+.bottom-maze-block{
+	border-bottom: none;
 }
-#inputs{
-	width: 200px;
-	margin: 20px auto 0;
+.right-maze-block{
+	border-right: none;
 }
-#order{
-	width: 100px;
-}
-#btn{
-	border-radius: 5px; 
-	border: 1px solid #ccc;
-	background-color: #fff;
-}
-.Top, .Right, .Bottom, .Left{
+.action{
+	width: 42px;
+	height: 34px;
 	background-color: red;
-}
-.Top div, .Right div, .Bottom div, .Left div{
-	background-color: blue;
-	position: absolute;
-}
-.Top div, .Bottom div{
-	width: 100%;
-	height: 10px;
-}
-.Left div, .Right div{
-	width: 10px;
-	height: 100%;
-	top: 0;
-}
-.Top div{
-	top: 0px;
-}
-.Right div{
-	right: 0px;
-}
-.Bottom div{
-	bottom: 0px;
-}
-.Left div{
-	left: 0px;
+	border-top: 8px solid blue;
+	transition: all 1s;
 }

@@ -64,10 +64,13 @@ var orders = {
 	action: $('.action'),	
 	orderGo: function(num){
 		var action = $('.action');
+		// console.log(action);
 		var degree = parseInt((action.style.transform).match(/[-]*\d+/g)[0]);
+		// console.log(degree);
 		//小技巧
 		if(num != 110){
 			degree = num;
+			// console.log(degree);
 		}
 		switch(degree % 360){
 			// TOP 
@@ -77,7 +80,7 @@ var orders = {
 						alert("已到达边界处，无法前进！");
 						return false;
 					}
-					action.style.top = parseInt((action.style.top) - 43) + 'px';
+					action.style.top = (parseInt(action.style.top) - 43) + 'px';
 					break;
 				}
 			// RIGHT
@@ -87,7 +90,7 @@ var orders = {
 					alert("已到达边界处，无法前进！");
 					return false;
 				}
-				action.style.left = parseInt((action.style.left) + 43) + 'px';
+				action.style.left = (parseInt(action.style.left) + 43) + 'px';
 				break;
 			}
 			// BOTTOM
@@ -97,7 +100,7 @@ var orders = {
 					alert("已到达边界处，无法前进！");
 					return false;
 				}
-				action.style.top = parseInt((action.style.top) + 43) + 'px';
+				action.style.top = (parseInt(action.style.top) + 43) + 'px';
 				break;
 			}
 			// LEFT
@@ -107,7 +110,7 @@ var orders = {
 					alert("已到达边界处，无法前进！");
 					return false;
 				}
-				action.style.left = parseInt((action.style.left) - 43) + 'px';
+				action.style.left = (parseInt(action.style.left) - 43) + 'px';
 			}
 		}
 	},
@@ -165,7 +168,7 @@ window.onload = function(){
 		// console.log(command);
 		switch(command){
 			case 'GO': return orders.orderGo(110);
-			case 'TUN LEf': return orders.orderLeft();
+			case 'TUN LEF': return orders.orderLeft();
 			case 'TUN RIG': return orders.orderRight();
 			case 'TUN BAC': return orders.orderBottom();
 			case 'TRA LEF': return orders.orderTraLeft();

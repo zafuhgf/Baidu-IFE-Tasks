@@ -61,7 +61,6 @@ function setDirection(degree){
 }
 //指令
 var orders = {
-	action: $('.action'),	
 	orderGo: function(num){
 		var action = $('.action');
 		// console.log(action);

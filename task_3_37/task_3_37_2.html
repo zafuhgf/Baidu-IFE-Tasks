@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_3_37_2</title>
+	<style type="text/css">
+		#popup{
+			border: 2px solid #BBAAAA;
+			position: fixed;
+			width: 400px;
+			height: 200px;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-top: -100px;
+		}
+		#popup h2{
+			height: 50px;
+			line-height: 50px;
+			background-color: #FBC30B;
+			margin-top: 0px;
+			padding-left: 10px;
+			cursor: move;
+		}
+		#popup span{
+			margin-left: 160px;
+			cursor: pointer;
+			border: 1px solid #ccc;
+			background-color: #aaa;
+		}
+		#content p{
+			margin-left: 10px;
+		}
+		#content div{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+		}
+		#content button{
+			background-color: #0F93F9;
+			padding: 10px 15px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="mask"></div>
+	<div id="popup">
+		<h2>This is a popup<span>×</span></h2>
+		<div id="content">
+			<p>This is a popup!</p>
+			<div>
+				<button>Confirm</button>
+				<button>Cancel</button>
+			</div>
+		</div>
+	</div>
+	<button>click me!</button>
+</body>
+</html>

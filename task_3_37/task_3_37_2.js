@@ -50,3 +50,10 @@ function setDrag(event){
 	}
 }
 
+//绑定事件
+eventUtil.addHandler(click, 'click', setBlcok);
+eventUtil.addHandler(close, 'click', setNone);
+eventUtil.addHandler(confirm, 'click', function(){alert("This is a popup!")});
+eventUtil.addHandler(cancle, 'click', setNone);
+eventUtil.addHandler(title, 'mousedown', setDrag);
+

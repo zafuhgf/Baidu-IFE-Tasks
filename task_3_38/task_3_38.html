@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_3_38</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: "Microsoft Yahei";
+		}
+		#container{
+			width: 600px;
+			margin: 30px auto;
+		}
+		#table{
+			width: 100%;
+			border-collapse: collapse;
+			text-align: center;
+			/*border: 1px solid #ccc;*/
+		}
+		#title{
+			background-color: #282727;
+			color: #fff;
+		}
+		th, td{
+			height: 30px;
+			line-height: 30px;
+			border: 1px solid #ccc;
+		}
+		th{
+			cursor: pointer;
+		}
+		th.tip{
+			background: url(./img/icon.jpeg) no-repeat right;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<table id="table">
+			<tr id="title">
+				<th id="name" class="tip">姓名</th>
+				<th id="chinese" class="tip">语文</th>
+				<th id="math" class="tip">数学</th>
+				<th id="english" class="tip">英语</th>
+				<th id="score" class="tip">总分</th>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+		function $(id){
+			return document.querySelector(id);
+		}
+		function addHandler(obj, type, fn){
+			if (obj.addEventListener){
+				obj.addEventListener(type, fn);
+			}else if(obj.attachEvent){
+				obj.attachEvent('on' + type, fn);
+			}else{
+				obj['on' + type] = fn;
+			}
+		}
+
+		var table = $('#table'),
+			data = [];
+		//构造函数
+		function Student(name, chinese, math, english){
+			this.name = name;
+			this.chinese = chinese;
+			this.math = math;
+			this.english = english;
+			this.score = chinese + math + english;
+		}
+		data[0] = new Student("Jack", 82, 94, 72);
+		data[1] = new Student("Mary", 78, 64, 94);
+		data[2] = new Student("Rose", 72, 83, 89);
+		data[3] = new Student("Judy", 96, 78, 67);
+
+		//渲染表格
+		function renderTable(data){
+			for(var i = 0, sum = ''; i < data.length; i++){
+				var row = '<tr><td>' + data[i].name + '</td><td>' + data[i].chinese + '</td><td>' + data[i].math + '</td><td>' + data[i].english + '</td><td>' + data[i].score + '</td></tr>';
+				sum += row;
+			}
+			table.innerHTML += sum;
+		}
+
+		//删除表格
+		function delTable(table){
+			var len = table.rows.length;
+			for(var i = 1; i < len; i++){
+				table.deleteRow(1);
+			}	
+		}
+
+		//升序排列
+		function asc(data, subject){
+			data.sort(function(a, b){
+				return a[subject] - b[subject];
+			});
+			return data;
+		}
+
+		//降序排列
+		function desc(data, subject){
+			data.sort(function(a, b){
+				return b[subject] - a[subject];
+			});
+			return data;
+		}
+
+		//升序降序选择
+		var flag = {
+			'chinese': true,
+			'math': true,
+			'english': true,
+			'score': true
+		};
+
+		window.onload = function(){
+			renderTable(data);
+			addHandler(table, 'click', function(event){
+				event = event || window.event;
+				var ele = event.target || event.srcElement;
+				if(ele.tagName.toLowerCase() === 'th'){
+					if(flag[ele.id] !== true){
+						asc(data, ele.id);
+					}else{
+						desc(data, ele.id);
+					}
+					delTable(table);
+					renderTable(data);
+					flag[ele.id] = !flag[ele.id];
+				}
+			});
+		}
+	</script>
+</body>
+</html>
